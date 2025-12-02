@@ -1,65 +1,76 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Instragram Feed</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid d-flex justify-content-between align-items-center">
 
             <a class="navbar-brand" href="#">
-                <img src="https://logo-teka.com/wp-content/uploads/2025/06/instagram-sign-logo.svg" 
-                     alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <i class="bi bi-instagram md-inline-block align-text-top" width="30" height="24"></i>
                 Instagram
             </a>
 
             <div class="d-flex align-items-center gap-3">
 
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Create a new post</button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@getbootstrap">Create a new post</button>
 
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Create new post</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                        <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Caption:</label>
-                            <textarea class="form-control" id="message-text" placeholder="Add the caption of your post here"></textarea>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Create new post</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Caption:</label>
+                                        <textarea class="form-control" id="message-text"
+                                            placeholder="Add the caption of your post here"></textarea>
+                                    </div>
+                                </form>
+                                <div class="mt-1 mb-4">
+                                    <button type="button" class="btn btn-light" data-bs-dismiss="modal"><i
+                                            class="fa-solid fa-camera"></i></button>
+                                    <button type="button" class="btn btn-light"><i
+                                            class="fa-solid fa-location-dot"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Send message</button>
+                            </div>
                         </div>
-                        </form>
-                        <div class="mt-1 mb-4">
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"><i class="fa-solid fa-camera"></i></button>
-                        <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
                     </div>
-                    </div>
-                     
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success">Send message</button>
-                    </div>
-                    </div>
-                </div>
                 </div>
 
                 <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" id="settingsDropdown" 
-                       data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" id="settingsDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-gear"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="settingsDropdown">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Accessibility</a></li>
                         <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item red" href="#">Log Out</a></li>
                     </ul>
                 </div>
@@ -68,41 +79,119 @@
         </div>
     </nav>
 
-    <div></div>
+    <div class="d-flex justify-content-center mt-4">
+        <ul class="w-50 justify-content-center nav nav-tabs border-0" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active border-0" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                        class="bi bi-border-all"></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link border-0" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                        class="bi bi-square-fill"></i></button>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="container mt-4">
+                    <div class="row g-2">
+                        <div class="col-12 col-md-4">
+                            <img src="https://images.unsplash.com/photo-1611003228941-98852ba62227?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFieSUyMGRvZ3xlbnwwfHwwfHx8MA%3D%3D"
+                                class="img img-container">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="https://wallpapercave.com/wp/wp14239076.jpg" class="img img-container">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/5b6eb3203768455.669d6315173ec.jpg"
+                                class="img img-container">
+                        </div>
 
-    <div class="container mt-4">
-        <div class="row g-2">
-            <div class="col-12 col-md-4">
-                <img src="https://images.unsplash.com/photo-1611003228941-98852ba62227?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFieSUyMGRvZ3xlbnwwfHwwfHx8MA%3D%3D" class="img img-container">
+                        <div class="col-12 col-md-4">
+                            <img src="https://static0.topspeedimages.com/wordpress/wp-content/uploads/2023/07/2023-cfmoto-300sr-front.jpg"
+                                class="img img-container">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="https://t3.ftcdn.net/jpg/04/42/92/24/360_F_442922459_p5GKqaureeb55U15DmAf8yEbUUm6fkyO.jpg"
+                                class="img img-container">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="https://media.istockphoto.com/id/157586559/photo/miami-at-night.jpg?s=612x612&w=0&k=20&c=QWZv66iaeBRI4qA0tkinBa7C3hqIy7UMoP4SHCHYw5Q="
+                                class="img img-container">
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <img src="https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg"
+                                class="img img-container">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Dp6Pp-seOiY2V8IDvNo-f4TbMJKrFvoVYg&s"
+                                class="img img-container">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnLmzJSUGp81n7h2_pn9ETVt20ZIShW8YKWA&s"
+                                class="img img-container">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-4">
-                <img src="https://wallpapercave.com/wp/wp14239076.jpg" class="img img-container">
-            </div>
-            <div class="col-12 col-md-4">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/5b6eb3203768455.669d6315173ec.jpg" class="img img-container">
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class=" mt-4 d-flex justify-content-center">
+                    <div class="w-50 mx-auto">
+
+                        <div class="card mb-5">
+                            <div class="card-header d-flex justify-content-between align-items-center"><h3>My motorcycle</h3>
+                            <h5>12/25</h5>
+                            </div>
+                            
+                            <img src="https://static0.topspeedimages.com/wordpress/wp-content/uploads/2023/07/2023-cfmoto-300sr-front.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">200 Likes</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eum, inventore impedit accusamus itaque nisi eligendi doloremque deleniti odit facere tenetur numquam quaerat fugiat veritatis sunt sit nesciunt quae autem.</p>
+                            </div>
+                        </div>
+
+                         <div class="card mb-5">
+                            <div class="card-header d-flex justify-content-between align-items-center"><h3>Lorem, ipsum.</h3>
+                            <h5>02/25</h5>
+                            </div>
+                            
+                            <img src="https://picsum.photos/200/300"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">1000 Likes</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, porro nisi laudantium in deleniti quisquam similique itaque ab. Delectus, in.</p>
+                            </div>
+                        </div>
+
+                         <div class="card mb-5">
+                            <div class="card-header d-flex justify-content-between align-items-center"><h3>Lorem ipsum dolor sit.</h3>
+                            <h5>11/22</h5>
+                            </div>
+                            
+                            <img src="https://picsum.photos/200/300"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">500 Likes</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolorem!</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
             </div>
 
-            <div class="col-12 col-md-4">
-                <img src="https://static0.topspeedimages.com/wordpress/wp-content/uploads/2023/07/2023-cfmoto-300sr-front.jpg" class="img img-container">
-            </div>
-            <div class="col-12 col-md-4">
-                <img src="https://t3.ftcdn.net/jpg/04/42/92/24/360_F_442922459_p5GKqaureeb55U15DmAf8yEbUUm6fkyO.jpg" class="img img-container">
-            </div>
-            <div class="col-12 col-md-4">
-                <img src="https://media.istockphoto.com/id/157586559/photo/miami-at-night.jpg?s=612x612&w=0&k=20&c=QWZv66iaeBRI4qA0tkinBa7C3hqIy7UMoP4SHCHYw5Q=" class="img img-container">
-            </div>
-
-            <div class="col-12 col-md-4">
-                <img src="https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg" class="img img-container">
-            </div>
-            <div class="col-12 col-md-4">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Dp6Pp-seOiY2V8IDvNo-f4TbMJKrFvoVYg&s" class="img img-container">
-            </div>
-            <div class="col-12 col-md-4">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnLmzJSUGp81n7h2_pn9ETVt20ZIShW8YKWA&s" class="img img-container">
-            </div>
         </div>
     </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
